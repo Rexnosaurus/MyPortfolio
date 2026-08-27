@@ -55,6 +55,14 @@ body{
 
     justify-content: flex-end;
 }
+
+.dunno {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.dunno > img{
+    height: 280px;
+}
 .list {
     display: flex;
     flex-direction: column;

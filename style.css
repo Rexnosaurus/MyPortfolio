@@ -1,10 +1,96 @@
+:root{
+    --primary-color: #6907fd;
+    --secondary-color: #ab53f3;
+    --accent-color: #48237e;
+    --background-color: #280c37;
+    --text-color: #ffffff;
+}
+body{
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    font-family: 'Arial', sans-serif;
+}
 .page_header{
+    display: grid;
+
+    grid-template-columns: 20% 60% 20%;
+
+    
+    width: 100%;
+    height: fit-content;
+
+    background-color: var(--primary-color);
+
+    justify-content: space-between;
+
+    align-items: center;
+    
+
+}
+
+.outputs{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(secondary-color);
+    
+}
+
+.buttons {
     display: flex;
     flex-direction: row;
 
     width: 100%;
     height: 42px;
 
-    background-color: aqua;
+    justify-content: flex-end;
+}
+.list {
+    display: flex;
+    flex-direction: column;
 
+    width: 100%;
+    height: fit-content;
+}
+
+.list_items {
+    display: flex;
+    flex-direction: row;
+
+
+    width: 100%;
+    height: fit-content;
+
+    justify-content: flex-start;
+    gap: 20px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.card__images{
+    height: 180px;
 }

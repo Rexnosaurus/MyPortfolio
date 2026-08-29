@@ -4,6 +4,7 @@
     --accent-color: #48237e;
     --background-color: #280c37;
     --text-color: #ffffff;
+    
 }
 body{
     margin: 0;
@@ -80,6 +81,7 @@ body{
     height: fit-content;
 
     justify-content: flex-start;
+
     gap: 20px;
 
     overflow-x: auto;
@@ -99,6 +101,16 @@ h2 {
     margin: 0;
 }
 
+button{
+    background: none;
+    border: none;
+    
+}
+
 .card__images{
     height: 180px;
+}
+
+@media screen {
+   
 }

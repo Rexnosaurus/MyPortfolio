@@ -13,29 +13,39 @@
 <body>
     <header class="page_header">
         <h1>My Portfolio</h1>
-        <input type="text" placeholder="Search...">
+        <div class="navigations">
+            <a href="#aboutme_section"> About Me </a>
+            <a href="#activites_section"> Activities </a>
+            <a href="#assignments_section"> Assignment </a>
+            <a href="#exams_section"> Exams </a>
+            <a href="#quizzes_section"> Quizzes </a>
+        </div>
         <div class="buttons">
-            <button><ion-icon name="moon-outline"></ion-icon></button>
-            <button>
-                <ion-icon name="add-circle-outline"></ion-icon>
-            </button>
+
         </div>
     </header>
     <main class="page_main">
         <section class="sections">
-            <section class="aboutme">
+            <section class="aboutme_section">
                 <h2>About Me</h2>
-                <div class="dunno">
-                    <p>Loremipsumdipapotaposito,basedesignpalangpo</p>
-                    <img src="assets/general-img-portrait.png" alt="">
+                <div class="aboutme__contents">
+                    <div>
+                        <p>Hello Peeps!! I'm Rexie Jr. T. Pimentel and this is my Portfolio</p>
+                        <p>You can call me <span class="myusernames" id="usernames"></span>, I play a lot of open-world games such Minecraft, Soul Games, Pokemon and Hoyo Games</p>
+
+                    </div>
+                    <img src="assets/094.png" alt="">
                     
                 </div>
             </section>
 
             <div class="outputs">
-                <section class="list">
-                    <h2>Activites</h2>
-                    <div class="list_items">
+                <section class="list"  id="activities_section">
+                    <div class="list_header">
+                        <h2>Activites |</h2>
+                        <a href="">View All</a>
+                    </div>
+                    <div class="list_items" >
                         <div class="item">
                             <img src="assets/general-img-portrait.png" alt="Test" srcset="" class="card__images">
                             <h3>Activity 1</h3>
@@ -53,13 +63,13 @@
                         </div>                                                
                     </div>
                 </section>
-                <section class="list">
+                <section class="list"  id="assignments_section">
                     <h2>Assignments</h2>
                 </section>
-                <section class="list">
-                    <h2>Quizes</h2>
+                <section class="list"  id="quizzes_section">
+                    <h2>Quizzes</h2>
                 </section>
-                <section class="list">
+                <section class="list" id="exams_section">
                     <h2>Exams</h2>
                 </section>
             </div>

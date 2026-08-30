@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const usernameElement = document.getElementById("usernames");
-    
+
     const nicknames = ["Rex", "RexTCM", "Rexnosaurus", "Dino", "Jun-Jun"];
     let currentIndex = 0;
 
@@ -8,15 +8,26 @@ document.addEventListener("DOMContentLoaded", () => {
         usernameElement.textContent = nicknames[currentIndex];
 
         setInterval(() => {
-            usernameElement.classList.add("fade-out");
+            usernameElement.classList.add("about__username--fade-out");
 
             setTimeout(() => {
                 currentIndex = (currentIndex + 1) % nicknames.length;
                 usernameElement.textContent = nicknames[currentIndex];
-                
-                usernameElement.classList.remove("fade-out");
+
+                usernameElement.classList.remove("about__username--fade-out");
             }, 500);
-            
-        }, 900);
+
+        }, 1000);
     }
 });
+
+function openModal(src) {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("expandedImg");
+    modal.style.display = "flex";
+    modalImg.src = src;
+}
+
+function closeModal() {
+    document.getElementById("imgModal").style.display = "none";
+}

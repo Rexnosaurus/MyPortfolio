@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <a href="https://www.rw-designer.com/cursor-set/all-pokemon"></a>
     <script src="script.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
@@ -19,7 +20,11 @@
             <a class="header__nav-link" href="#exams_section">Exams</a>
             <a class="header__nav-link" href="#quizzes_section">Quizzes</a>
         </nav>
-        <div class="header__actions"></div>
+        <div class="header__actions">
+            <button onclick="toggleMuted()" class="button__mute" id="muteBtn">
+                <ion-icon name="volume-high-outline" id="muteIcon"></ion-icon>
+            </button>
+        </div>
     </header>
 
     <main class="main">
@@ -29,9 +34,14 @@
                 <div class="about__body">
                     <div class="about__text">
                         <p>Hello Peeps!! I'm Rexie Jr. T. Pimentel and this is my Portfolio</p>
-                        <p>You can call me <span class="about__username" id="usernames"></span>, I play a lot of open-world games such Minecraft, Soul Games, Pokemon and Hoyo Games</p>
+                        <p>You can call me <span class="about__username" id="usernames"></span>, I am 19yro and I play a lot of open-world games such Minecraft, Soul Games, Pokemon and Hoyo Games</p>
+                        <div>
+                            <a class="about__link" href="https://www.facebook.com/rexie.pimentel.967/"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a class="about__link" href="https://www.instagram.com/rexnosaurus_/"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a class="about__link" href="https://discord.com/users/623197186049441824"><ion-icon name="logo-discord"></ion-icon></a>
+                        </div>
                     </div>
-                    <img src="assets/094.png" alt="">
+                    <img src="assets/images/094.png" alt="">
                 </div>
             </section>
             <hr>
@@ -53,27 +63,7 @@
                     <h2 class="list__title">Quizzes</h2>
                     <div class="list__items">
                         <div class="list__item">
-                            <img src="assets/download.jpg" alt="Test" srcset="" class="list__item-image list__item-image--zoomable" onclick="openModal(this.src)">
-                            <h3 class="list__item-title">Quiz #1</h3>
-                            <p class="list__item-description">8-25-26 | 13/20</p>
-                        </div>
-                        <div class="list__item">
-                            <img src="assets/download.jpg" alt="Test" srcset="" class="list__item-image list__item-image--zoomable" onclick="openModal(this.src)">
-                            <h3 class="list__item-title">Quiz #1</h3>
-                            <p class="list__item-description">8-25-26 | 13/20</p>
-                        </div>
-                        <div class="list__item">
-                            <img src="assets/download.jpg" alt="Test" srcset="" class="list__item-image list__item-image--zoomable" onclick="openModal(this.src)">
-                            <h3 class="list__item-title">Quiz #1</h3>
-                            <p class="list__item-description">8-25-26 | 13/20</p>
-                        </div>
-                        <div class="list__item">
-                            <img src="assets/download.jpg" alt="Test" srcset="" class="list__item-image list__item-image--zoomable" onclick="openModal(this.src)">
-                            <h3 class="list__item-title">Quiz #1</h3>
-                            <p class="list__item-description">8-25-26 | 13/20</p>
-                        </div>
-                        <div class="list__item">
-                            <img src="assets/download.jpg" alt="Test" srcset="" class="list__item-image list__item-image--zoomable" onclick="openModal(this.src)">
+                            <img src="assets/images/download.jpg" alt="Test" srcset="" class="list__item-image list__item-image--zoomable" onclick="openModal(this.src)">
                             <h3 class="list__item-title">Quiz #1</h3>
                             <p class="list__item-description">8-25-26 | 13/20</p>
                         </div>
@@ -86,6 +76,8 @@
             </div>
         </section>
     </main>
+
+    <audio src="assets/audio/Lavender_Town_Original_Japanese_Version_KLICKAUD.mp3" autoplay loop id="bgMusic"></audio>
 
     <!-- https://www.w3schools.com/howto/howto_css_modal_images.asp -->
     <div id="imgModal" class="modal" onclick="closeModal()">

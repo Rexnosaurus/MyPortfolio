@@ -31,3 +31,17 @@ function openModal(src) {
 function closeModal() {
     document.getElementById("imgModal").style.display = "none";
 }
+
+const muteBtn = document.getElementById('muteBtn');
+const muteIcon = document.getElementById('muteIcon');
+const myMedia = document.getElementById('bgMusic');
+
+muteBtn.addEventListener('click', () => {
+  myMedia.muted = !myMedia.muted;
+  
+  if (myMedia.muted) {
+    muteIcon.setAttribute('name', 'volume-mute-outline');
+  } else {
+    muteIcon.setAttribute('name', 'volume-high-outline');
+  }
+});

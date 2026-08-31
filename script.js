@@ -32,10 +32,6 @@ function closeModal() {
     document.getElementById("imgModal").style.display = "none";
 }
 
-const muteBtn = document.getElementById('muteBtn');
-const muteIcon = document.getElementById('muteIcon');
-const myMedia = document.getElementById('bgMusic');
-
 document.addEventListener('DOMContentLoaded', () => {
   const muteBtn = document.getElementById('muteBtn');
   const myMedia = document.getElementById('bgMusic');

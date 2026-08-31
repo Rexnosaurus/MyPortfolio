@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'PokemonRBYGSC';
+    src: url(assets/fonts/PKMN\ RBYGSC.ttf);
+}
+
 :root {
     --primary-color: #7b58ab;
     --secondary-color: #633a8a;
@@ -21,8 +26,13 @@ html, body {
 
     scroll-behavior: smooth;
     animation:rwdcur14895 0.33333333333333s linear infinite forwards;
+
+    font-family:  'PokemonRBYGSC', sans-serif;;
 }
 
+body {
+    height: 100vh;
+}
 a, button, img {
     animation:rwdcur147386 0.33333333333333s linear infinite forwards;
 }
@@ -128,17 +138,27 @@ header > button {
 .about__body > img {
     height: 280px;
     justify-self: flex-end;
+    border-radius: 150px;
+    background-image: url(assets/images/094.png);
 
     transition: 1.5s ease-in-out;
 }
 
 .about__link{
     font-size: 32px;
+    text-decoration: none;
+    color: #280c37;
+    transition: 0.2s ease-in-out;
+}
+
+.about__link:hover{
+    color: var(--secondary-color);
+    font-size: 40px;
 }
 
 .about__username {
     display: inline-block;
-    color: #ff0000;
+    color: #330056;
     text-decoration: underline;
     transition: opacity 0.5s ease-in-out;
     
@@ -239,17 +259,25 @@ header > button {
 }
 
 
+@media (max-width: 1160px) {
+    .header__title{
+        display: none;        
+    }
+    .header{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+}
 @media (max-width: 750px)  {
     .header{
         display: grid;
         grid-template-columns: 100%;
     }
-    .header__title{
-        display: none;        
-    }
 
     .header__nav{
         width: 100%;
+        display: inline;
     }
 
     .header__actions {

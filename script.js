@@ -36,12 +36,16 @@ const muteBtn = document.getElementById('muteBtn');
 const muteIcon = document.getElementById('muteIcon');
 const myMedia = document.getElementById('bgMusic');
 
-muteBtn.addEventListener('click', () => {
-  myMedia.muted = !myMedia.muted;
-  
-  if (myMedia.muted) {
-    muteIcon.setAttribute('name', 'volume-mute-outline');
-  } else {
-    muteIcon.setAttribute('name', 'volume-high-outline');
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const muteBtn = document.getElementById('muteBtn');
+  const myMedia = document.getElementById('bgMusic');
+  const muteIcon = document.getElementById('muteIcon');
+
+  muteBtn.addEventListener('click', () => {
+    myMedia.muted = !myMedia.muted;
+    if (!myMedia.muted && myMedia.paused) {
+      myMedia.play().catch(err => console.warn('Play blocked:', err));
+    }
+    muteIcon.setAttribute('name', myMedia.muted ? 'volume-mute-outline' : 'volume-high-outline');
+  });
 });

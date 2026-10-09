@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
     <header class="header">
         <h1 class="header__title">My Portfolio</h1>
@@ -34,35 +36,40 @@
                 <div class="about__body">
                     <div class="about__text">
                         <p>Hello Peeps!! I'm Rexie Jr. T. Pimentel from BSCS-3B and this is my Portfolio</p>
-                        <p>You can call me <span class="about__username" id="usernames"></span>, I am 19yro and I play a lot of open-world games such Minecraft, Soul Games, Pokemon and Hoyo Games</p>
+                        <p>You can call me <span class="about__username" id="usernames"></span>, I am 19yro and I play a
+                            lot of open-world games such Minecraft, Soul Games, Pokemon and Hoyo Games</p>
                         <div>
-                            <a class="about__link" href="https://www.facebook.com/rexie.pimentel.967/"><ion-icon name="logo-facebook"></ion-icon></a>
-                            <a class="about__link" href="https://www.instagram.com/rexnosaurus_/"><ion-icon name="logo-instagram"></ion-icon></a>
-                            <a class="about__link" href="https://discord.com/users/623197186049441824"><ion-icon name="logo-discord"></ion-icon></a>
-                            
+                            <a class="about__link" href="https://www.facebook.com/rexie.pimentel.967/"><ion-icon
+                                    name="logo-facebook"></ion-icon></a>
+                            <a class="about__link" href="https://www.instagram.com/rexnosaurus_/"><ion-icon
+                                    name="logo-instagram"></ion-icon></a>
+                            <a class="about__link" href="https://discord.com/users/623197186049441824"><ion-icon
+                                    name="logo-discord"></ion-icon></a>
+
                         </div>
                     </div>
-                    <!-- https://stackoverflow.com/questions/18813299/changing-image-on-hover-with-css-html -->
+                    <!-- https://stackoverflow.com/questions/18813299/changing-image-on-hover-with-css-html  (future implementation)-->
                     <img class="hero-img" src="assets/images/ME.jpg">
                 </div>
             </section>
             <hr>
             <div class="content__lists">
 
-                <section class="list" id="activities_section">  
+                <section class="list" id="activities_section">
                     <h2 class="list__title">Activites</h2>
                     <div class="list__empty">
-                    <p>--------Stay Tuned--------</p>     
+                        <p>--------Stay Tuned--------</p>
                     </div>
                     <div class="list__items">
-
                     </div>
                 </section>
                 <hr>
                 <section class="list" id="assignments_section">
                     <h2 class="list__title">Assignments</h2>
                     <div class="list__empty">
-                        <p>--------Stay Tuned--------</p>     
+                        <p>--------Stay Tuned--------</p>
+                    </div>
+                    <div class="list__items">
                     </div>
                 </section>
                 <hr>
@@ -70,7 +77,12 @@
                     <h2 class="list__title">Quizzes</h2>
                     <div class="list__items">
                         <div class="list__item">
-                            <img src="assets/images/download.jpg" alt="Test" srcset="" class="list__item-image list__item-image--zoomable" onclick="openModal(this.src)">
+                            <img src="assets/images/quizzes/Quiz1/download.jpg" data-set="quiz1"
+                                class="list__item-image list__item-image--zoomable" alt="Quiz 1 Front"
+                                onclick="openModal(this.src)">
+                            <img src="assets/images/quizzes/Quiz1/download-back.jpg" data-set="quiz1"
+                                class="list__item-image list__item-image--zoomable" alt="Quiz 1 Back"
+                                onclick="openModal(this.src)" style="display: none;">
                             <div class="list__info">
                                 <h3 class="list__item-title">Quiz #1</h3>
                                 <p class="list__item-description">8-25-26 | 13/20</p>
@@ -81,20 +93,36 @@
                 <hr>
                 <section class="list" id="exams_section">
                     <h2 class="list__title">Exams</h2>
-                        <div class="list__empty">
-                        <p>--------Stay Tuned--------</p>     
+                    <div class="list__empty">
+                        <p>--------Stay Tuned--------</p>
+                    </div>
+                    <div class="list__items">
+                        <div class="list__item">
+                            <img src="assets/images/exam/midterm/midterm.jpg"
+                                class="list__item-image list__item-image--zoomable" alt="Quiz 1 Front"
+                                onclick="openModal(this.src)">
+                            <div class="list__info">
+                                <h3 class="list__item-title">Midterms Exam</h3>
+                                <p class="list__item-description">10-06-26 | 65/70</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
         </section>
     </main>
 
-    <audio src="assets/audio/Lavender_Town_Original_Japanese_Version_KLICKAUD.mp3" autoplay loop id="bgMusic" muted></audio>
+    <audio src="assets/audio/Lavender_Town_Original_Japanese_Version_KLICKAUD.mp3" autoplay loop id="bgMusic"
+        muted></audio>
 
     <!-- https://www.w3schools.com/howto/howto_css_modal_images.asp -->
     <div id="imgModal" class="modal" onclick="closeModal()">
+        <span class="modal__prev-page" onclick="event.stopPropagation(); prevImage()">&lt;</span>
         <span class="modal__close">&times;</span>
         <img class="modal__content" id="expandedImg">
+        <div id="imgModalCaption" class="modal__caption"></div>
+        <span class="modal__next-page" onclick="event.stopPropagation(); nextImage()">&gt;</span>
     </div>
 </body>
+
 </html>
